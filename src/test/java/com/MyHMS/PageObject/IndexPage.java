@@ -10,7 +10,7 @@ public class IndexPage {
 	public WebDriver driver;
 
 //create constructor
-	IndexPage(WebDriver rdriver){
+	public IndexPage(WebDriver rdriver){
 		driver=rdriver;
 		PageFactory.initElements(driver,this);
 	}
