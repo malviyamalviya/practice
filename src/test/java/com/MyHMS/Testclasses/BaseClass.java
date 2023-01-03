@@ -23,35 +23,31 @@ public WebDriver driver;
 	ReadConfigproperties readconfig=new ReadConfigproperties();
 	
 	String url=readconfig.getUrl();
-	String browser1= readconfig.getbrowser1();
-	String browser2=readconfig.getbrowser2();
-	String browser3=readconfig.getbrowser3();
+	String browser= readconfig.getbrowser1();
+
 	
 	@BeforeClass
 	public void setup() {
-		if(browser1.toLowerCase()=="chrome") {
-			WebDriverManager.chromedriver().setup();
-			ChromeOptions option=new ChromeOptions();
-			option.addArguments("--disable-notifications");
-			WebDriver driver=new ChromeDriver(option);
-			driver.manage().window().maximize();
-		}
-		else if(browser2.toLowerCase()=="firefox") {
-			WebDriverManager.firefoxdriver().setup();
-			FirefoxOptions option=new FirefoxOptions();
-			option.addArguments("--disable-notifications");
-			WebDriver driver=new FirefoxDriver(option);
-			driver.manage().window().maximize();
-		}
-		else if(browser3.toLowerCase()=="msedge") {
-			WebDriverManager.edgedriver().setup();
-			EdgeOptions option=new EdgeOptions();
-			option.addArguments("--disable-notifications");
-			WebDriver driver=new EdgeDriver(option);
-			driver.manage().window().maximize();
-	}else {
 		
+	switch(browser.toLowerCase()) {
+	case "chrome":
+		WebDriverManager.chromedriver().setup();
+		driver= new ChromeDriver();
+		break;
+	case "msedge":
+		WebDriverManager.edgedriver().setup();
+		driver=new EdgeDriver();
+		break;
+	case "firefox":
+		WebDriverManager.firefoxdriver().setup();
+		driver=new FirefoxDriver();
+		break;
+		default:
+		driver=null;
+		break;
 	}
+		
+		
 
 		//implicite wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

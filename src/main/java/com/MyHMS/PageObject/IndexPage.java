@@ -16,11 +16,20 @@ public class IndexPage {
 	}
 
 	//identify element
-	@FindBy(xpath = "//a[@href='http://www.seleniumbymahesh.com/HMS/']")WebElement HMS;
-	
+@FindBy(xpath = "//input[@placeholder='Username']")WebElement username;
+
+@FindBy(xpath = "//input[@placeholder='Password']")WebElement password;
+@FindBy(xpath = "//button[@type='submit']")WebElement login;
+
 	//action
-	public void clickHMS() {
-		HMS.click();
+	public void EnteruserName(String Username) {
+		username.sendKeys(Username);
 	}
 
+	public void Enterpassword(String Password) {
+		password.sendKeys(Password);
+	}
+	public void ClickOnLogin() {
+		login.click();
+	}
 }
