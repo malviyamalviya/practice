@@ -5,7 +5,7 @@
     <classes>
       <class name="com.MyHMS.Testclasses.TC01Clickonhomepage">
         <methods>
-          <include name="clickonhome"/>
+          <include name="verifyLoginByURL"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>

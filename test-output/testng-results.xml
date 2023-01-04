@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-02T19:40:49 IST" name="Default suite" finished-at="2023-01-02T19:41:11 IST" duration-ms="21351">
+  <suite started-at="2023-01-04T18:19:16 IST" name="Default suite" finished-at="2023-01-04T18:19:32 IST" duration-ms="15934">
     <groups>
     </groups>
-    <test started-at="2023-01-02T19:40:49 IST" name="Default test" finished-at="2023-01-02T19:41:11 IST" duration-ms="21351">
+    <test started-at="2023-01-04T18:19:16 IST" name="Default test" finished-at="2023-01-04T18:19:32 IST" duration-ms="15934">
       <class name="com.MyHMS.Testclasses.TC01Clickonhomepage">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyHMS.Testclasses.TC01Clickonhomepage@449a4f23]" started-at="2023-01-02T19:40:49 IST" name="setup" finished-at="2023-01-02T19:40:52 IST" duration-ms="2834" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyHMS.Testclasses.TC01Clickonhomepage@1530c739]" started-at="2023-01-04T18:19:16 IST" name="setup" finished-at="2023-01-04T18:19:19 IST" duration-ms="2697" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="clickonhome()[pri:0, instance:com.MyHMS.Testclasses.TC01Clickonhomepage@449a4f23]" started-at="2023-01-02T19:40:52 IST" name="clickonhome" finished-at="2023-01-02T19:41:10 IST" duration-ms="18250" status="PASS">
+        <test-method signature="clickonhome()[pri:0, instance:com.MyHMS.Testclasses.TC01Clickonhomepage@1530c739]" started-at="2023-01-04T18:19:19 IST" name="clickonhome" finished-at="2023-01-04T18:19:31 IST" duration-ms="11631" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickonhome -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.MyHMS.Testclasses.TC01Clickonhomepage@449a4f23]" started-at="2023-01-02T19:41:10 IST" name="teardown" finished-at="2023-01-02T19:41:11 IST" duration-ms="195" status="PASS">
+        <test-method signature="verifyLoginByURL()[pri:0, instance:com.MyHMS.Testclasses.TC01Clickonhomepage@1530c739]" started-at="2023-01-04T18:19:31 IST" name="verifyLoginByURL" finished-at="2023-01-04T18:19:32 IST" duration-ms="1339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginByURL -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.MyHMS.Testclasses.TC01Clickonhomepage@1530c739]" started-at="2023-01-04T18:19:32 IST" name="teardown" finished-at="2023-01-04T18:19:32 IST" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
