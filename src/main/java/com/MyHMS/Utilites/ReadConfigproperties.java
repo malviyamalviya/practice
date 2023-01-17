@@ -3,6 +3,7 @@ package com.MyHMS.Utilites;
 
 import java.io.FileInputStream;
 
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
@@ -44,7 +45,24 @@ public class ReadConfigproperties {
 				throw new RuntimeException("browser1 is not specified");
 		
 	}
+	public String getusername() {
+		String userName=properties.getProperty("username");
+		if(userName!=null) 
+			return userName;
+			else
+				throw new RuntimeException("userName is not specified");
+		
+		
+	}
+	public String getpassword() {
+		String passWord=properties.getProperty("password");
+		if(passWord!=null) 
+			return passWord;
+			else
+				throw new RuntimeException("password is not specified");
+		
 	
 	
 	}
 
+}
