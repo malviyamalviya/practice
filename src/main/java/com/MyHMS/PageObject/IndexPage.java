@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class IndexPage {
 //webdriverobject
-	public WebDriver driver;
+	private WebDriver driver;
 
 //create constructor
 	public IndexPage(WebDriver rdriver){
