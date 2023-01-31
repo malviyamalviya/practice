@@ -11,7 +11,6 @@ import com.MyHMS.PageObject.IndexPage;
 public class TC01Clickonhomepage extends BaseClass{
 @Test
 	public void clickonhome() {
-	
 	driver.get(url);
 	logger.info("url opened");
 		

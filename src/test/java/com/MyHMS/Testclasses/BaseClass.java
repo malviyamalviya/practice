@@ -25,7 +25,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 
-private WebDriver driver;
+public WebDriver driver;
 	
 	ReadConfigproperties readconfig=new ReadConfigproperties();
 	
