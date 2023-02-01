@@ -2,11 +2,13 @@ package com.MyHMS.Testclasses;
 
 import java.io.IOException;
 
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.MyHMS.PageObject.IndexPage;
+import com.MyHMS.PageObject.LoginPage;
+
 
 public class TC01Clickonhomepage extends BaseClass{
 @Test
@@ -14,7 +16,7 @@ public class TC01Clickonhomepage extends BaseClass{
 	driver.get(url);
 	logger.info("url opened");
 		
-		IndexPage page1=new IndexPage(driver);
+		LoginPage page1=new LoginPage(driver);
 		BaseClass h=new TC01Clickonhomepage();
 		page1.EnteruserName(h.userName);
 		page1.Enterpassword(h.passWord);
@@ -23,8 +25,8 @@ public class TC01Clickonhomepage extends BaseClass{
 		}
 @Test
 public void verifyLoginByURL() throws IOException {
-	String AfterLoginexp="https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
-	String AfterLoginact=driver.getCurrentUrl();
+	String AfterLoginexp="Master Page";
+	String AfterLoginact=driver.getTitle();
      if(AfterLoginact.equals(AfterLoginexp)) {
     	 Assert.assertTrue(true);
      }else {

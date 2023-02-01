@@ -6,30 +6,30 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class IndexPage {
-//webdriverobject
-	public WebDriver driver;
 
-//create constructor
+	//create the webdriver object
+	
+	public WebDriver ldriver;
+	
+	//create the constructor
 	public IndexPage(WebDriver rdriver){
-		driver=rdriver;
-		PageFactory.initElements(driver,this);
+		
+		ldriver=rdriver;
+		PageFactory.initElements(rdriver,this);
+		
 	}
-
-	//identify element
-@FindBy(xpath = "//input[@placeholder='Username']")WebElement username;
-
-@FindBy(xpath = "//input[@placeholder='Password']")WebElement password;
-@FindBy(xpath = "//button[@type='submit']")WebElement login;
-
-	//action
-	public void EnteruserName(String Username) {
-		username.sendKeys(Username);
+	
+	
+	//find element
+	
+	@FindBy(xpath = "//a[@href='http://www.seleniumbymahesh.com/HMS/']")
+	WebElement HMS;
+	
+	
+	//write the methods
+	
+	public void clickonHMS() {
+		HMS.click();
 	}
-
-	public void Enterpassword(String Password) {
-		password.sendKeys(Password);
-	}
-	public void ClickOnLogin() {
-		login.click();
-	}
+	
 }

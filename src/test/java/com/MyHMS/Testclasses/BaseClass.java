@@ -5,8 +5,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +24,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 
-public WebDriver driver;
 	
 	ReadConfigproperties readconfig=new ReadConfigproperties();
 	
@@ -34,8 +32,16 @@ public WebDriver driver;
 	String userName=readconfig.getusername();
 	String passWord=readconfig.getpassword();
 
-	public static Logger logger;
+	
+	public  static WebDriver driver;
+	
+	
+
+	
+	
+	
 	@BeforeClass
+	
 	public void setup() {
 		
 	switch(browser.toLowerCase()) {
@@ -62,7 +68,7 @@ public WebDriver driver;
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		//for logging
-		logger=LogManager.getLogger("Myhms");
+		
 		
 		}
 	@AfterClass
