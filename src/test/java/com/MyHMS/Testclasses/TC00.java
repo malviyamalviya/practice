@@ -10,9 +10,11 @@ public class TC00 extends BaseClass{
 	public void clickonHMS() {
 		
 		driver.get(url);
-		
+		logger.info("URL OPENED");
 		IndexPage page1=new IndexPage(driver);
 		page1.clickonHMS();
+		logger.info("Clicked on HMS");
+
 	}
 	@Test
 	public void verifypagetitle() {
@@ -20,5 +22,7 @@ public class TC00 extends BaseClass{
 		String acttitle=driver.getTitle();
 		org.testng.Assert.assertEquals(exptitle, acttitle);
 		
+		logger.info("After new page verify for the same page title");
+
 	}
 }

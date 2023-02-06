@@ -1,11 +1,13 @@
 package com.MyHMS.Testclasses;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -35,7 +37,7 @@ public class BaseClass {
 	
 	public  static WebDriver driver;
 	
-	
+	public static Logger logger;
 
 	
 	
@@ -69,7 +71,7 @@ public class BaseClass {
 		
 		//for logging
 		
-		
+		logger=LogManager.getLogger("Myhms");
 		}
 	@AfterClass
 	public void teardown() {
