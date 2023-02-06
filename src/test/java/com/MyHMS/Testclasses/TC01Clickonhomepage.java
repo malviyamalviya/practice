@@ -13,8 +13,9 @@ import com.MyHMS.PageObject.LoginPage;
 public class TC01Clickonhomepage extends BaseClass{
 @Test
 	public void clickonhome() {
-	driver.get(url);
-	logger.info("url opened");
+	
+	    TC00 test1=new TC00();
+	    test1.clickonHMS();
 		
 		LoginPage page1=new LoginPage(driver);
 		BaseClass h=new TC01Clickonhomepage();
