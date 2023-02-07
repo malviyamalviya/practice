@@ -1,7 +1,6 @@
-package com.MyHMS.Testclasses;
+ package com.MyHMS.Testclasses;
 
 import java.io.File;
-
 import java.io.IOException;
 import java.time.Duration;
 
@@ -12,13 +11,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import com.MyHMS.Utilites.ReadConfigproperties;
 
@@ -64,19 +62,25 @@ public class BaseClass {
 		break;
 	}
 		
-		
-
 		//implicite wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		//for logging
 		
 		logger=LogManager.getLogger("Myhms");
+		
+		
+		driver.get(url);
+		logger.info("URL OPENED");
+		driver.manage().window().maximize();
+		
 		}
 	@AfterClass
 	public void teardown() {
 		driver.close();
+		driver.quit();
 	}
+	
 	
 	public void capturescreenshot(WebDriver driver,String testname) throws IOException {
 		
@@ -84,7 +88,7 @@ public class BaseClass {
 		//step2
 		File src = schshot.getScreenshotAs(OutputType.FILE);
 	    
-	File dest=new File(System.getProperty("D:\\my pen drive\\Myhms\\screenshots\\"+testname+".png"));
+	File dest=new File("D:\\my pen drive\\Myhms\\screenshot\\"+testname+".png");
 	
 	FileUtils.copyFile(src,dest);
 	}

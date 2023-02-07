@@ -12,7 +12,7 @@ import com.MyHMS.PageObject.LoginPage;
 public class TC01Clickonhomepage extends BaseClass{
 @Test
 	public void Login() {
-	    logger.info("URL OPENED");
+	   
 	    TC00 test1=new TC00();
 	    test1.clickonHMS();
 	    logger.info("CLICKED ON HMS");
@@ -27,18 +27,20 @@ public class TC01Clickonhomepage extends BaseClass{
 		logger.info("CLICKED ON LOGIN");
 		}
 @Test
-public void verifyLoginByURL() throws IOException {
-	String AfterLoginexp="Master Page";
+public void verifyLoginBytitle() throws IOException {
+	String AfterLoginexp="Master Page1";
 	String AfterLoginact=driver.getTitle();
      if(AfterLoginact.equals(AfterLoginexp)) {
+    	 logger.info("verifying page title");
+    	
     	 Assert.assertTrue(true);
      }else {
-    	 capturescreenshot(driver, "verifyLoginByURL");
-    		System.out.println("fail");
-        	 Assert.assertTrue(false);
+    	 logger.info("verifying failed");
+    	 capturescreenshot(driver, "verifyLoginBytitle");
+    		 Assert.assertTrue(false);
         	 
 }
-     logger.info("VERIFY PAGE TITLE");
+     
 }
 }
 

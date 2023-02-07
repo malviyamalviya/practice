@@ -9,8 +9,7 @@ public class TC00 extends BaseClass{
 	@Test
 	public void clickonHMS() {
 		
-		driver.get(url);
-		logger.info("URL OPENED");
+		
 		IndexPage page1=new IndexPage(driver);
 		page1.clickonHMS();
 		logger.info("Clicked on HMS");

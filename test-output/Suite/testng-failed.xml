@@ -8,8 +8,8 @@
     <classes>
       <class name="com.MyHMS.Testclasses.TC01Clickonhomepage">
         <methods>
-          <include name="verifyLoginByURL"/>
           <include name="setup"/>
+          <include name="verifyLoginBytitle"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.MyHMS.Testclasses.TC01Clickonhomepage -->

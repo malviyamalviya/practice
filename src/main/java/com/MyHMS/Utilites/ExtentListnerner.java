@@ -1,6 +1,8 @@
 package com.MyHMS.Utilites;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -21,7 +23,10 @@ public class ExtentListnerner implements ITestListener{
 	
 	
 	public void configureReport() {
-		htmlreporter=new ExtentSparkReporter("ExtentReportListnerMyhms.html");
+		
+		String timestamp=new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss").format(new Date());
+		String reportname="MyhmsTestReport-"+timestamp+".html";
+		htmlreporter=new ExtentSparkReporter(System.getProperty("user.dir")+"//Reports//"+reportname);
 		reports=new ExtentReports();
 		reports.attachReporter(htmlreporter);
 
@@ -37,7 +42,49 @@ public class ExtentListnerner implements ITestListener{
 		htmlreporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
 	}
 	
+	@Override
+	public void onStart(ITestContext context) {
+		System.out.println("ONstartMethod invoke..........");
+		configureReport();
+	}
 
+	@Override
+	public void onFinish(ITestContext context) {
+		System.out.println("ONFinishMethod invoke..........");
+		reports.flush();
+// to log the message
+	} 
+	
+	@Override
+	public void onTestFailure(ITestResult result) {
+		System.out.println("name of test failure: "+result.getName());
+		test=reports.createTest(result.getName());
+		test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+" Fail", ExtentColor.RED));
+		test.fail(result.getThrowable());
+		
+		String screenshotpath=System.getProperty("user.dir")+"\\screenshot\\"+result.getName()+".png";
+		File screenshotfile=new File(screenshotpath);
+		if(screenshotfile.exists()) {
+			test.fail("capture screenshot as below"+test.addScreenCaptureFromPath(screenshotpath));
+		
+		
+		
+		
+		
+		}
+     }
+
+	
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		System.out.println("name of test Skipped: "+result.getName());
+		test=reports.createTest(result.getName());
+        test.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+" skipped", ExtentColor.YELLOW));
+		test.pass(result.getThrowable());
+
+	}
+	
+	
 	@Override
 	public void onTestStart(ITestResult result) {
 		System.out.println("name of test executing: "+result.getName());
@@ -51,46 +98,17 @@ public class ExtentListnerner implements ITestListener{
         test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" Pass", ExtentColor.GREEN));
 	}
 
-	@Override
-	public void onTestFailure(ITestResult result) {
-		System.out.println("name of test failure: "+result.getName());
-		test=reports.createTest(result.getName());
-		test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+" Fail", ExtentColor.RED));
-		test.fail(result.getThrowable());
-		
-		String screenshotpath=System.getProperty("D:\\my pen drive\\Myhms\\screenshots\\"+result.getName()+".png");
-		File screenshotfile=new File(screenshotpath);
-		if(screenshotfile.exists()) {
-			test.fail("capture screenshot as below"+test.addScreenCaptureFromPath(screenshotpath));
-		}
-     }
-
-	@Override
-	public void onTestSkipped(ITestResult result) {
-		System.out.println("name of test Skipped: "+result.getName());
-		test=reports.createTest(result.getName());
-        test.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+" skipped", ExtentColor.YELLOW));
-		test.pass(result.getThrowable());
-
-	}
+	
+	
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		
 	}
 
-	@Override
-	public void onStart(ITestContext context) {
-		System.out.println("ONstartMethod invoke..........");
-		configureReport();
-	}
+	
 
-	@Override
-	public void onFinish(ITestContext context) {
-		System.out.println("ONFinishMethod invoke..........");
-		reports.flush();
-// to log the message
-	} 
+	
 	
 	
 }

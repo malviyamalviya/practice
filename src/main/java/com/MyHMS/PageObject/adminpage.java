@@ -20,6 +20,7 @@ public class adminpage {
 		@FindBy(linkText = "Registration")
 		WebElement Registration;
 		
+		
 		public void clickonRegistration() {
 			Registration.click();
 		}
