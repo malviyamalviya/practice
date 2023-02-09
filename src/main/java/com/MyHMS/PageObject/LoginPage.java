@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-//webdriverobject
+// create Webdriver object
 	public WebDriver ldriver;
 
 //create constructor
@@ -16,20 +16,24 @@ public class LoginPage {
 	}
 
 	//identify element
-@FindBy(xpath = "//input[@name='username']")WebElement username;
+@FindBy(xpath = "//input[@name='username']")WebElement UserName;
 
-@FindBy(xpath = "//input[@name='password']")WebElement password;
+@FindBy(xpath = "//input[@name='password']")WebElement PassWord;
 @FindBy(xpath = "//input[@name='submit']")WebElement login;
+@FindBy(xpath = "//a[normalize-space()='Logout']")WebElement logout;	
 
-	//action
+//action
 	public void EnteruserName(String Username) {
-		username.sendKeys(Username);
+		UserName.sendKeys(Username);
 	}
 
 	public void Enterpassword(String Password) {
-		password.sendKeys(Password);
+		PassWord.sendKeys(Password);
 	}
 	public void ClickOnLogin() {
 		login.click();
+	}
+	public void clickonLogout() {
+		logout.click();
 	}
 }

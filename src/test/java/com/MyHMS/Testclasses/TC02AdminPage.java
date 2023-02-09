@@ -19,10 +19,10 @@ public class TC02AdminPage extends BaseClass{
 			logger.info("Clicked on HMS");
 			
 			LoginPage page2=new LoginPage(driver);
-			BaseClass h=new TC01Clickonhomepage();
-			page2.EnteruserName(h.userName);
+			
+			page2.EnteruserName("admin");
 			logger.info("USER NAME ENTERED");
-			page2.Enterpassword(h.passWord);
+			page2.Enterpassword("admin");
 			logger.info("PASSWORD ENTERED");
 			page2.ClickOnLogin();
 			logger.info("CLICKED ON LOGIN");

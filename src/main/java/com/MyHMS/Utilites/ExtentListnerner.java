@@ -23,7 +23,7 @@ public class ExtentListnerner implements ITestListener{
 	
 	
 	public void configureReport() {
-		
+		ReadConfigproperties readconfig=new ReadConfigproperties();
 		String timestamp=new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss").format(new Date());
 		String reportname="MyhmsTestReport-"+timestamp+".html";
 		htmlreporter=new ExtentSparkReporter(System.getProperty("user.dir")+"//Reports//"+reportname);
@@ -34,6 +34,8 @@ public class ExtentListnerner implements ITestListener{
 		reports.setSystemInfo("Machine", "testPC1");
 		reports.setSystemInfo("OS", "Window11");
 		reports.setSystemInfo("User", "Sourabh");
+		reports.setSystemInfo("Browser", readconfig.getbrowser1());
+
 
 		//look and fill configuration
 		htmlreporter.config().setDocumentTitle("ExtentReportDemo");

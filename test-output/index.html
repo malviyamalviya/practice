@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.MyHMS.Testclasses.TC01Clickonhomepage" class="method navigator-link" hash-for-method="verifyLoginBytitle">verifyLoginBytitle</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,7 +104,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.MyHMS.Testclasses.TC01Clickonhomepage" class="method navigator-link" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.MyHMS.Testclasses.TC02AdminPage2DDT" class="method navigator-link" hash-for-method="AclickHMS">AclickHMS</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.MyHMS.Testclasses.TC02AdminPage2DDT" class="method navigator-link" hash-for-method="clickonregis(mahesh, mahesh)">clickonregis(mahesh, mahesh)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.MyHMS.Testclasses.TC02AdminPage2DDT" class="method navigator-link" hash-for-method="clickonregis(admin, admin)">clickonregis(admin, admin)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -133,37 +129,33 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.MyHMS.Testclasses.TC01Clickonhomepage</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyLoginBytitle">
-                  </a> <!-- verifyLoginBytitle -->
-                  <span class="method-name">verifyLoginBytitle</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at com.MyHMS.Testclasses.TC01Clickonhomepage.verifyLoginBytitle(TC01Clickonhomepage.java:40)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.MyHMS.Testclasses.TC01Clickonhomepage</span>
+              <span class="class-name">com.MyHMS.Testclasses.TC02AdminPage2DDT</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Login">
-                  </a> <!-- Login -->
-                  <span class="method-name">Login</span>
+                  <a name="AclickHMS">
+                  </a> <!-- AclickHMS -->
+                  <span class="method-name">AclickHMS</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickonregis(mahesh, mahesh)">
+                  </a> <!-- clickonregis(mahesh, mahesh) -->
+                  <span class="method-name">clickonregis</span>
+                  <span class="parameters">(mahesh, mahesh)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickonregis(admin, admin)">
+                  </a> <!-- clickonregis(admin, admin) -->
+                  <span class="method-name">clickonregis</span>
+                  <span class="parameters">(admin, admin)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,7 +175,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.MyHMS.Testclasses.TC01Clickonhomepage&quot;/&gt;
+      &lt;class name=&quot;com.MyHMS.Testclasses.TC02AdminPage2DDT&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -223,20 +215,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Login')
-data.setCell(0, 2, 'com.MyHMS.Testclasses.TC01Clickonhomepage')
-data.setCell(0, 3, 6349);
+data.setCell(0, 1, 'clickonregis')
+data.setCell(0, 2, 'com.MyHMS.Testclasses.TC02AdminPage2DDT')
+data.setCell(0, 3, 7856);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyLoginBytitle')
-data.setCell(1, 2, 'com.MyHMS.Testclasses.TC01Clickonhomepage')
-data.setCell(1, 3, 1332);
+data.setCell(1, 1, 'clickonregis')
+data.setCell(1, 2, 'com.MyHMS.Testclasses.TC02AdminPage2DDT')
+data.setCell(1, 3, 3094);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'AclickHMS')
+data.setCell(2, 2, 'com.MyHMS.Testclasses.TC02AdminPage2DDT')
+data.setCell(2, 3, 1189);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -262,24 +258,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.MyHMS.Testclasses.TC01Clickonhomepage</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.MyHMS.Testclasses.TC02AdminPage2DDT</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">Login</span>
-                <span class="method-start">6651 ms</span>
+                <span class="method-name">AclickHMS</span>
+                <span class="method-start">12291 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyLoginBytitle</span>
-                <span class="method-start">13029 ms</span>
+                <span class="method-name">clickonregis(admin, admin)</span>
+                <span class="method-start">15279 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clickonregis(mahesh, mahesh)</span>
+                <span class="method-start">23140 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">14377 ms</span>
+                <span class="method-start">26238 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

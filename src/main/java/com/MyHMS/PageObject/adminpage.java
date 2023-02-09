@@ -20,9 +20,12 @@ public class adminpage {
 		@FindBy(linkText = "Registration")
 		WebElement Registration;
 		
+		@FindBy(xpath = "//a[normalize-space()='Logout']")WebElement logout;
 		
 		public void clickonRegistration() {
 			Registration.click();
 		}
-				
+		public void clickonLogout() {
+			logout.click();
+		}	
 }
