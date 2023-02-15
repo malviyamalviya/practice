@@ -22,7 +22,7 @@ public class IndexPage {
 	
 	//find element
 	
-	@FindBy(xpath = "//a[@href='http://www.seleniumbymahesh.com/HMS/']")
+	@FindBy(xpath = "//a[@href='http://www.seleniumbymahesh.com/HMS/']")private
 	WebElement HMS;
 	
 	

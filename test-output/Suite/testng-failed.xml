@@ -6,13 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.MyHMS.Testclasses.TC01Clickonhomepage2DDF">
+      <class name="com.MyHMS.Testclasses.TC02AdminPage2DDT">
         <methods>
           <include name="setup"/>
-          <include name="Login" invocation-numbers="0"/>
+          <include name="clickonregis"/>
+          <include name="AclickHMS"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.MyHMS.Testclasses.TC01Clickonhomepage2DDF -->
+      </class> <!-- com.MyHMS.Testclasses.TC02AdminPage2DDT -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
