@@ -9,8 +9,7 @@
       <class name="com.MyHMS.Testclasses.TC02AdminPage2DDT">
         <methods>
           <include name="setup"/>
-          <include name="clickonregis"/>
-          <include name="AclickHMS"/>
+          <include name="clickonregis" invocation-numbers="0 1"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.MyHMS.Testclasses.TC02AdminPage2DDT -->

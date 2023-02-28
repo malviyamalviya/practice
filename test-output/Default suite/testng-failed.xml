@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.MyHMS.Testclasses.TC01Clickonhomepage2DDF">
+      <class name="com.MyHMS.Testclasses.TC00">
         <methods>
+          <include name="verifypagetitle"/>
           <include name="setup"/>
-          <include name="Login" invocation-numbers="0 1"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.MyHMS.Testclasses.TC01Clickonhomepage2DDF -->
+      </class> <!-- com.MyHMS.Testclasses.TC00 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

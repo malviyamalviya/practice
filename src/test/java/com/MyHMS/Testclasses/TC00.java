@@ -17,7 +17,7 @@ public class TC00 extends BaseClass{
 	}
 	@Test
 	public void verifypagetitle() {
-		String exptitle="User Login Page";
+		String exptitle="User Login Pag";
 		String acttitle=driver.getTitle();
 		org.testng.Assert.assertEquals(exptitle, acttitle);
 		
