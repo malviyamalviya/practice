@@ -21,7 +21,7 @@ public class adminpage {
 		@FindBy(linkText = "Registration")
 		WebElement Registration;
 		
-		@FindBy(xpath = "//a[normalize-space()='Logout']")WebElement logout;
+		@FindBy(xpath = "//a[normalize-space()='Logout']")private WebElement logout;
 		
 		public void clickonRegistration() {
 			Registration.click();
